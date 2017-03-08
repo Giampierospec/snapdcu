@@ -1,0 +1,14 @@
+body{
+  background-color: #000240;
+}
+#message{
+  transition: 0.5ms;
+}
+
+.container-fluid{
+  margin-top: 25%;
+  margin-left: auto;
+  margin-right: auto;
+color: #FFF;
+
+}
