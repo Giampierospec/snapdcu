@@ -1,0 +1,16 @@
+body{
+  background-color: #A9A9A9;
+}
+.container-fluid{
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 75%;
+  width: 30%;
+
+}
+.bg-jb{
+  background-color:#04081A;
+  color:#FFF;
+
+}
