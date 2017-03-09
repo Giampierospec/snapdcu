@@ -1,0 +1,19 @@
+body{
+  background-color: #000240;
+}
+.container-fluid{
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+color: #FFF;
+}
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #A9A9A9;
+}
+.carousel-indicators li.active {
+    background-color: #A9A9A9;
+}

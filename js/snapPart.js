@@ -10,13 +10,9 @@ var canvas = null;
 var photo_button = null;
 var dat = [];
 var localStream;
-function photoSrc(src){
-  this.source = src;
-}
 function saveImage(src){
   if(src != null){
-    var sc = new photoSrc(src);
-    dat.push(sc);
+    dat.push(src);
     console.log(dat);
     alert("Imagen guardada correctamente");
     save();
@@ -104,7 +100,8 @@ clearPhoto();
      h1 = document.createElement("h1");
      h1.innerHTML = "Redirigiendo a galeria";
      message.appendChild(h1);
-     $(h1).addClass("animated fadeout infinite");
+     $(h1).addClass("animated fadeOut infinite");
+     $(h1).css("margin-top","50%");
      video.pause();
   video.src = "";
   localStream.getTracks()[0].stop();
