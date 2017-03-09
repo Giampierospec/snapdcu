@@ -1,5 +1,5 @@
 body{
-  background-color: #000240;
+  background-color: #04081A;
 }
 .container-fluid{
   margin-top: 10%;
@@ -7,8 +7,20 @@ body{
   margin-right: auto;
 color: #FFF;
 }
+.bg-dark-blue{
+  background-color: #04081A;
+  color: #FFF;
+  font-size: 30px;
+}
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Lemonada', monospace;
+}
+p{
+  font-family: 'Open Sans', monospace;
+}
 .carousel-inner > .item > img {
-    margin: 0 auto;
+    margin: 5% auto;
+    width: 50%;
 }
 .carousel-control.right, .carousel-control.left {
     background-image: none;
