@@ -9,8 +9,18 @@ body{
   width: 30%;
 
 }
+h1,h2,h3,h4,h5,h6{
+  font-family: 'Lemonada', monospace;
+}
+p{
+  font-family: 'Open Sans', monospace;
+}
 .bg-jb{
+  font-size: 30px;
   background-color:#04081A;
   color:#FFF;
 
+}
+.bg-jb button:hover {
+  color: grey;
 }

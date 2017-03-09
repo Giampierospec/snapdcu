@@ -12,22 +12,36 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<script src="https://use.fontawesome.com/01d9e54a7d.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lemonada|Open+Sans" rel="stylesheet">
 <link rel="stylesheet" href="css/snap.css">
   <title>Snap Part</title>
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid text-center">
+  <h1>GiamSnap</h1>
   <div class="jumbotron bg-jb">
     <div id="camera_take">
               <div class="row">
                 <div class="col-sm-12">
-                  <video id="video" width="1280" height="720" autoplay></video>
+                  <video id="video" width="640" height="480" autoplay></video>
                 </div>
 
                 <div class="col-sm-4" style="display:none;">
                   <canvas id="canvas"></canvas>
                 </div>
 
+              </div>
+              <div class="row">
+                <div class="col-sm-4">
+                  <button type="button" id="clstab" class="btn bg-jb"> <i class="fa fa-window-close-o"></i></button>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button" id="photo_button" class="btn bg-jb"><i class="fa fa-camera-retro"></i></button>
+                </div>
+                <div class="col-sm-4">
+                  <button type="button"id="gallery" class="btn bg-jb"><i class="fa fa-picture-o"></i></button>
+                </div>
               </div>
 
 
