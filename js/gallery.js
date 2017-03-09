@@ -22,9 +22,10 @@ function output(){
 }
 
 function goBack(){
-  if (confirm("¿Seguro que desea regresar a la vista de fotos?")) {
+  if (confirm("¿Seguro que desea regresar a la vista principal?")) {
     $("#galleryImages").fadeOut(2000);
-    setTimeout(returnSnap, 8000);
+    $(btnBack).fadeOut(2000);
+    setTimeout(returnSnap, 10000);
     h1 = document.createElement("h1");
     h1.innerHTML = "Redirigiendo...";
     $(h1).addClass("animated fadeOut infinite");

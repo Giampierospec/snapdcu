@@ -113,6 +113,13 @@ clearPhoto();
  function redirectGallery(){
    window.open("gallery.html","_self");
  }
+ function loadData(){
+   var datos = localStorage.getItem("savedPhotos");
+   if(datos != null){
+     dat = JSON.parse(datos);
+     cargarVistaPrincipal();
+   }
+ }
  //Eventos
- window.addEventListener("load",cargarVistaPrincipal);
+ window.addEventListener("load",loadData);
  gallery.addEventListener("click",loadGallery);
