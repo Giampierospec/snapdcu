@@ -19,12 +19,13 @@
 </head>
 <body>
 <div class="container-fluid text-center">
-  <h1>GiamSnap</h1>
+
   <div class="jumbotron bg-jb">
+      <h1>SnapPhoto</h1>
     <div id="camera_take">
               <div class="row">
                 <div class="col-sm-12">
-                  <video id="video" width="640" height="480" autoplay></video>
+                  <video id="video" autoplay></video>
                 </div>
 
                 <div class="col-sm-4" style="display:none;">
@@ -33,23 +34,20 @@
 
               </div>
               <div class="row">
-                <div class="col-sm-4">
-                  <button type="button" id="clstab" class="btn bg-jb"> <i class="fa fa-window-close-o"></i></button>
-                </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <button type="button" id="photo_button" class="btn bg-jb"><i class="fa fa-camera-retro"></i></button>
                 </div>
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                   <button type="button"id="gallery" class="btn bg-jb"><i class="fa fa-picture-o"></i></button>
                 </div>
               </div>
-
-
-
+  </div>
 
   </div>
+  <div id="message">
 
   </div>
 </div>
+<script src="js/snapPart.js" charset="utf-8"></script>
 </body>
 </html>

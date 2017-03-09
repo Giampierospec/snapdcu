@@ -1,13 +1,21 @@
 body{
-  background-color: #A9A9A9;
+  background-color: #000240;
 }
 .container-fluid{
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
   height: 75%;
-  width: 30%;
-
+  width: 50%;
+color: #FFF;
+}
+#camera_take{
+  width: 100%;
+  height: 100%;
+}
+video{
+  height: 100%;
+  width: 100%;
 }
 h1,h2,h3,h4,h5,h6{
   font-family: 'Lemonada', monospace;
@@ -19,7 +27,6 @@ p{
   font-size: 30px;
   background-color:#04081A;
   color:#FFF;
-
 }
 .bg-jb button:hover {
   color: grey;
