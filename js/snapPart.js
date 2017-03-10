@@ -117,8 +117,8 @@ clearPhoto();
    var datos = localStorage.getItem("savedPhotos");
    if(datos != null){
      dat = JSON.parse(datos);
-     cargarVistaPrincipal();
    }
+   cargarVistaPrincipal();
  }
  //Eventos
  window.addEventListener("load",loadData);

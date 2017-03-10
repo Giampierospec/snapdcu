@@ -8,6 +8,9 @@ function loadData(){
     data = JSON.parse(datos);
     output();
   }
+  else if(datos == null){
+    returnToSnap();
+  }
 }
 
 function output(){
@@ -31,6 +34,15 @@ function goBack(){
     $(h1).addClass("animated fadeOut infinite");
     $(h1).appendTo(".container-fluid");
   }
+}
+function returnToSnap(){
+  $("#galleryImages").fadeOut(2000);
+  $(btnBack).fadeOut(2000);
+  setTimeout(returnSnap, 10000);
+  h1 = document.createElement("h1");
+  h1.innerHTML = "Redirigiendo...";
+  $(h1).addClass("animated fadeOut infinite");
+  $(h1).appendTo(".container-fluid");
 }
 function returnSnap(){
   window.open("snap.html","_self")
