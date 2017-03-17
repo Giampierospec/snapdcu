@@ -18,14 +18,9 @@ h1,h2,h3,h4,h5,h6{
 p{
   font-family: 'Open Sans', monospace;
 }
-.carousel-inner > .item > img {
-    margin: 5% auto;
-    width: 50%;
-}
-.carousel-control.right, .carousel-control.left {
-    background-image: none;
-    color: #A9A9A9;
-}
-.carousel-indicators li.active {
-    background-color: #A9A9A9;
+.jumbotron, #galleryImages{
+  width: 60%;
+  height: 70%;
+  margin: 2% auto;
+  background:transparent;
 }

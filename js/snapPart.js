@@ -1,3 +1,4 @@
+//Variables
 var photoTake = document.getElementById("photo_button");
 var gallery = document.getElementById("gallery");
 var cam = document.getElementById("camera_take");
@@ -10,6 +11,7 @@ var canvas = null;
 var photo_button = null;
 var dat = [];
 var localStream;
+//Save the image
 function saveImage(src){
   if(src != null){
     dat.push(src);
@@ -22,10 +24,12 @@ function saveImage(src){
   }
 
 }
+//Saves everything
 function save(){
   var datos = JSON.stringify(dat);
   localStorage.setItem("savedPhotos",datos);
 }
+//This takes photo
 function tomarFoto(){
   $(".jumbotron").fadeIn("slow");
   video = document.getElementById('video');
@@ -61,6 +65,7 @@ function tomarFoto(){
     }, false);
 clearPhoto();
 }
+//clears photo
  function clearPhoto(){
    var context = canvas.getContext('2d');
    context.fillstyle = "#AAA";
@@ -69,6 +74,7 @@ clearPhoto();
    var data = canvas.toDataURL('image/png');
    src = data;
  }
+ //Takes a picture
  function takePic(){
    var context = canvas.getContext('2d');
    if(width && height){
@@ -84,7 +90,7 @@ clearPhoto();
      clearPhoto();
    }
  }
-
+//loads the main view
  function cargarVistaPrincipal(){
    $(".jumbotron").hide();
    var message = document.getElementById("message");
@@ -94,6 +100,7 @@ clearPhoto();
    $(h1).fadeOut(4000);
    setTimeout(tomarFoto, 5000);
  }
+ //Loads the gallery view
  function loadGallery(){
    if(confirm("Seguro que desea visitar la galeria?")){
      $(".jumbotron").hide();
@@ -110,9 +117,11 @@ clearPhoto();
 
    }
  }
+ //redirect to gallery
  function redirectGallery(){
    window.open("gallery.html","_self");
  }
+ //load Data
  function loadData(){
    var datos = localStorage.getItem("savedPhotos");
    if(datos != null){

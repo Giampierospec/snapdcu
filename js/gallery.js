@@ -1,6 +1,7 @@
 var data = [];
 var btnBack = document.getElementById("btn_back");
 $(document).ready(loadData);
+var i = 0;
 
 function loadData(){
   var datos = localStorage.getItem("savedPhotos");
@@ -14,14 +15,19 @@ function loadData(){
 }
 
 function output(){
-  for(var i=0 ; i< data.length ; i++) {
-    $('<div class="item text-center"><img class="img-thumbnail" src="'+data[i]+'"></div>').appendTo('.carousel-inner');
-    $('<li data-target="#galleryImages" data-slide-to="'+i+'"></li>').appendTo('.carousel-indicators')
-
+    if(i == data.length){
+      i = 0;
+      setTimeout(output,0);
+    }
+  else{
+      $("#galleryImages").html("<div class='jumbotron thumbnail'><img src='"+data[i]+"'></div>").fadeIn(1000, fadeOutImage);
   }
-  $('.item').first().addClass('active');
-  $('.carousel-indicators > li').first().addClass('active');
-  $('#galleryImages').carousel({interval: 5000});
+}
+
+function fadeOutImage(){
+  $("#galleryImages").fadeOut(7000);
+  i++;
+  setTimeout(output, 6000);
 }
 
 function goBack(){
