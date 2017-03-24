@@ -12,7 +12,7 @@ function changeText(){
   h1.innerHTML = "En un momento sera redirigido...";
   message.appendChild(h1);
   $(h1).addClass("animated fadeOut infinite");
-  setTimeout(redirect,7000);
+  setTimeout(redirect,5000);
 }
 function redirect(){
   window.open("snap.html","_self");

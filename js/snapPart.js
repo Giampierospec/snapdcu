@@ -16,7 +16,6 @@ function saveImage(src){
   if(src != null){
     dat.push(src);
     console.log(dat);
-    alert("Imagen guardada correctamente");
     save();
   }
   else{
@@ -61,6 +60,7 @@ function tomarFoto(){
 
     photo_button.addEventListener('click', function(ev){
       takePic();
+      $("#photoModal").modal("show");
       ev.preventDefault();
     }, false);
 clearPhoto();
@@ -113,7 +113,7 @@ clearPhoto();
   video.src = "";
   localStream.getTracks()[0].stop();
   console.log("Vid off");
-     setTimeout(redirectGallery,12000);
+     setTimeout(redirectGallery,7000);
 
    }
  }
