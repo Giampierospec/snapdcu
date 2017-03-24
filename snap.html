@@ -44,22 +44,29 @@
                             <div class='modal-dialog'>
                               <div class='modal-content'>
                                 <div class='modal-header'>
-                                  <h4 class='modal-title'>Foto suya</h4>
+                                  <h1 class='modal-title'>Foto suya</h1>
                                 </div>
                                 <div class='modal-body'>
-                                    <div class="row">
-                                      <div class="col-sm-12">
-                                        <canvas id="canvas"></canvas>
-                                      </div>
-                                    </div>
-                                    <div class="row">
-                                      <div class="col-sm-6">
-                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                      </div>
+                                        <div class="thumbnail center">
+                                          <canvas id="canvas" style="display:none;"></canvas>
+                                          <img id="imgPhoto" src="" alt=""  class="img-responsive"/>
+                                          <div id="caption">
+                                            <p>Esta foto es la actual</p>
+                                          </div>
+                                        </div>
+                                    <div class="row center">
+                                          <div class="col-sm-12">
+                                            <div class="center">
+                                              <button type="button" id="check_photo" class="btn btn-success"><i class='fa fa-check'></i></button>
+                                              <button type="button" id="close_photo" class=" btn btn-danger"><i class=" fa fa-window-close"></i></button>
+                                            </div>
+                                          </div>
                                     </div>
                                 </div>
-                                <div class='modal-footer'>
-                                <h4>Esta fue la foto que usted se tomó</h4>
+                              <div class='modal-footer'>
+                                <div class="text-center">
+                                    <h4>Esta fue la foto que usted se tomó</h4>
+                                </div>
                               </div>
                               </div>
 

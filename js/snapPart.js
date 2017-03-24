@@ -16,6 +16,7 @@ function saveImage(src){
   if(src != null){
     dat.push(src);
     console.log(dat);
+    alert("Imagen guardada correctamente");
     save();
   }
   else{
@@ -81,10 +82,16 @@ clearPhoto();
      canvas.width = width;
      canvas.height = height;
      context.drawImage(video,0,0, width,height);
-
      var data = canvas.toDataURL('image/png');
      src = data;
-      saveImage(src);
+     $("#imgPhoto").attr('src', src);
+     $("#check_photo").on("click", function(){
+       var data = canvas.toDataURL('image/png');
+       src = data;
+       $("#photoModal").modal("toggle");
+       saveImage(src);
+     });
+
    }
    else{
      clearPhoto();
@@ -117,6 +124,12 @@ clearPhoto();
 
    }
  }
+ // Here i show some alert
+ $("#close_photo").on('click', function() {
+   if(confirm("¿Estás seguro de que quieres cerrar y volver?")){
+     $("#photoModal").modal('toggle');
+   }
+ });
  //redirect to gallery
  function redirectGallery(){
    window.open("gallery.html","_self");
@@ -129,6 +142,7 @@ clearPhoto();
    }
    cargarVistaPrincipal();
  }
+
  //Eventos
  window.addEventListener("load",loadData);
  gallery.addEventListener("click",loadGallery);

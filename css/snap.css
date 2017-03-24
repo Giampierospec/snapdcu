@@ -1,13 +1,17 @@
 body{
   background-color: #000240;
+  color:#FFF;
 }
 .container-fluid{
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
-  height: 85s%;
+  height: 85%;
   width: 40%;
-color: #FFF;
+  color:#FFF;
+}
+.center{
+  margin: 2% auto;
 }
 #camera_take{
   width: 100%;
@@ -31,6 +35,8 @@ p{
 .bg-jb button:hover {
   color: grey;
 }
-.bg-marine-blue{
-  background-color: #000240;
+
+.modal{
+  background: #000240;
+  color: #000;
 }
